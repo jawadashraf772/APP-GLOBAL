@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps Global | Enterprise Software Built for Global Scale</title>
+    <meta name="description" content="Empower your organization with robust, scalable, and secure enterprise solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <!-- Styled A Logo -->
+                <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4 L4 36 L12 36 L20 18 Z" fill="#00d2ff"/>
+                    <path d="M20 4 L36 36 L28 36 L20 18 Z" fill="#0044ff"/>
+                    <path d="M9 25 L31 25 L28 32 L12 32 Z" fill="#0011aa"/>
+                </svg>
+                <div class="logo-text" style="display: flex; flex-direction: column; line-height: 1.2;">
+                    <span style="font-weight: 700; font-size: 1.2rem; color: #ffffff; letter-spacing: -0.5px;">Apps Global</span>
+                    <span style="font-weight: 500; font-size: 0.8rem; color: #00d2ff;">Your trusted technology partner</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#solutions">Solutions</a>
+                <a href="#industries">Industries</a>
+                <a href="#approach">Approach</a>
+                <a href="#services">Services</a>
+            </nav>
+            <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Section -->
+    <section class="hero" id="home" style="text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-top: 120px; flex-direction: column;">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 class="headline fade-up" style="margin-bottom: 24px;">Enterprise Software Built for <span class="text-gradient">Global Scale</span></h1>
+                <p class="sub-headline fade-up delay-1" style="max-width: 700px; margin: 0 auto 40px;">Empower your organization with robust, scalable, and secure enterprise solutions designed to drive efficiency and innovation in today’s fast-paced digital landscape.</p>
+                <div class="hero-actions fade-up delay-2" style="justify-content: center; margin-bottom: 80px;">
+                    <a href="#services" class="btn btn-outline btn-lg" style="border-radius: 8px; padding: 14px 32px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.02);">Explore projects</a>
+                </div>
+            </div>
+            
+            <!-- 3 Cards matching screenshot layout -->
+            <div class="hero-cards fade-up delay-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; text-align: center; margin-bottom: 60px;">
+                <div class="glass-panel" style="padding: 40px 24px; border-radius: 16px; background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 12px; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(245, 87, 108, 0.2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 12px;">Cloud Infrastructure</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Scalable architectures for modern demands</p>
+                </div>
+                <div class="glass-panel" style="padding: 40px 24px; border-radius: 16px; background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00d2ff, #3a7bd5); border-radius: 12px; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 12px;">Software Solutions</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Automation of business processes</p>
+                </div>
+                <div class="glass-panel" style="padding: 40px 24px; border-radius: 16px; background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #b490ca, #5ee7df); border-radius: 12px; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(180, 144, 202, 0.2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
+                    </div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 12px;">Cybersecurity</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Data protection and cybersecurity</p>
+                </div>
+            </div>
+
+            <!-- Moved original MacBook visual underneath the cards -->
+            <div class="hero-visual fade-in delay-3" style="width: 100%; max-width: 900px; margin: 0 auto;">
+                <div class="glass-card main-dashboard fade-in">
+                    <!-- Dashboard Window Header -->
+                    <div class="dash-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="dash-title">app-global-core.js</div>
+                    </div>
+                    <!-- Dashboard Body with Running Code -->
+                    <div class="dash-body terminal-body">
+                        <pre><code id="running-code"></code></pre>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Key Statistics -->
+    <section class="statistics section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-panel reveal">
+                    <h2 class="stat-number"><span class="counter" data-target="10">0</span>+</h2>
+                    <p class="stat-title">Years Experience</p>
+                    <p class="stat-desc">A decade of expertise in delivering high-impact software solutions.</p>
+                </div>
+                <div class="stat-card glass-panel reveal delay-1">
+                    <h2 class="stat-number"><span class="counter" data-target="15">0</span>+</h2>
+                    <p class="stat-title">Global Clients</p>
+                    <p class="stat-desc">Trusted by businesses across the globe to handle complex requirements.</p>
+                </div>
+                <div class="stat-card glass-panel reveal delay-2">
+                    <h2 class="stat-number"><span class="counter" data-target="20">0</span>+</h2>
+                    <p class="stat-title">Projects Completed</p>
+                    <p class="stat-desc">A track record of successful project deliveries across various industries.</p>
+                </div>
+                <div class="stat-card glass-panel reveal delay-3">
+                    <h2 class="stat-number"><span class="counter" data-target="6">0</span>+</h2>
+                    <p class="stat-title">Team Members</p>
+                    <p class="stat-desc">A dedicated, skilled team working together to achieve excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Software Solutions -->
+    <section class="solutions section" id="solutions">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Software, Should Be Built for <span class="text-gradient">Global Scale</span></h2>
+                <p class="section-details">We focus on creating high-performance software that grows with your business, ensuring you stay ahead of the competition.</p>
+            </div>
+            
+            <div class="solutions-visual reveal delay-1">
+                <div class="bento-grid">
+                    <div class="bento-item glass-panel glow-blue">
+                        <div class="bento-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                        <h3>Scale</h3>
+                        <p>Architecture that handles millions of active users effortlessly.</p>
+                    </div>
+                    <div class="bento-item glass-panel glow-cyan">
+                        <div class="bento-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        <h3>Performance</h3>
+                        <p>Optimized for blazing fast global delivery and low latency.</p>
+                    </div>
+                    <div class="bento-item glass-panel glow-purple">
+                        <div class="bento-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                        <h3>Security</h3>
+                        <p>Military-grade encryption and advanced threat protection built-in.</p>
+                    </div>
+                    <div class="bento-item glass-panel glow-green">
+                        <div class="bento-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                        <h3>Agility</h3>
+                        <p>Rapid deployment cycles to keep you ahead of the market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Industry Focus & Section 6: Our Approach -->
+    <section class="split-section section" id="industries">
+        <div class="container split-grid">
+            
+            <!-- Industry Focus -->
+            <div class="split-content reveal">
+                <div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></div>
+                <h2 class="section-title">Bespoke Software for Every Industry</h2>
+                <p class="section-details">From Education and Healthcare to specialized sectors, we develop custom software designed to solve unique industry challenges.</p>
+                <ul class="feature-list">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Healthcare Solutions</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> EdTech Platforms</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Financial Tech</li>
+                </ul>
+            </div>
+
+            <!-- Our Approach -->
+            <div class="split-cards reveal delay-1" id="approach">
+                <div class="card glass-panel hover-lift">
+                    <div class="card-icon blue-glow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Build secure, resilient and infinitely scalable cloud environments tailored to your needs.</p>
+                </div>
+                <div class="card glass-panel hover-lift">
+                    <div class="card-icon cyan-glow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></div>
+                    <h3>Data Solutions</h3>
+                    <p>Unlock the power of your data with advanced analytics, modeling, and management tools.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 7: Services Offered -->
+    <section class="services section bg-darker" id="services">
+        <div class="container">
+            <div class="section-header center reveal">
+                <h2 class="section-title">Comprehensive <span class="text-gradient">Services</span></h2>
+                <p class="section-details">End-to-end technology solutions to drive your digital transformation.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass-panel reveal">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+                    <h3>Custom Software</h3>
+                    <p>Tailored solutions built specifically for your unique business logic.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-1">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                    <h3>Web Development</h3>
+                    <p>High-quality, responsive websites and dynamic web applications.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-2">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Engaging mobile experiences for iOS and Android platforms.</p>
+                </div>
+                <div class="service-card glass-panel reveal">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                    <h3>DevOps</h3>
+                    <p>Streamlining your development workflow for faster, reliable delivery.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-1">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg></div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centric design principles for intuitive and beautiful interfaces.</p>
+                </div>
+                <div class="service-card glass-panel reveal delay-2">
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
+                    <h3>Consulting</h3>
+                    <p>Expert guidance and strategy for your holistic digital transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Impact & Testimonials -->
+    <section class="impact section">
+        <div class="container">
+            <div class="section-header center reveal">
+                <h2 class="section-title">Real Impact <span class="text-gradient">Speaks for Itself</span></h2>
+                <p class="section-details">Discover how our solutions have helped our partners achieve their goals and optimize operations effectively.</p>
+            </div>
+            
+            <div class="testimonial-slider reveal delay-1">
+                <div class="testimonial-card glass-panel">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Apps Global completely transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise is unmatched.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Jenkins</h4>
+                            <span>CTO, TechNova</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-panel">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">The custom software they built streamlined our operations and boosted our productivity by 40% in just three months.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <span>Director of Ops, FinCorp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Blog/Latest Insights -->
+    <section class="insights section bg-darker">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">A proven list of tips from <span class="text-gradient">our experts</span></h2>
+                <p class="section-details">A collection of articles focusing on modern technology trends and best practices in the industry.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <a href="#" class="blog-card reveal">
+                    <div class="blog-image img-cloud"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Cloud</span>
+                        <h3>Migrating to Multi-Cloud: A Strategic Guide for 2024</h3>
+                        <div class="blog-meta">Read Time: 5 min</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card highlight reveal delay-1">
+                    <div class="blog-image img-security"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Security</span>
+                        <h3>Zero Trust Architecture in Enterprise Software</h3>
+                        <div class="blog-meta">Read Time: 7 min</div>
+                    </div>
+                </a>
+                <a href="#" class="blog-card reveal delay-2">
+                    <div class="blog-image img-dev"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Development</span>
+                        <h3>Why Microservices are the Future of Scaling</h3>
+                        <div class="blog-meta">Read Time: 4 min</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Final CTA & Consultation -->
+    <section class="final-cta section" id="contact">
+        <div class="container split-grid">
+            <div class="cta-box glass-panel reveal">
+                <div class="cta-content" style="text-align: left; padding: 0;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Apps Global - Your Partner in <span class="text-gradient">Enterprise Innovation</span></h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 32px;">Ready to build software that scales globally? Let's discuss your specific needs and create a roadmap to success.</p>
+                    
+                    <div class="faq-section" style="margin-top: 40px;">
+                        <h3 class="faq-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 20px;">Frequently Asked Questions</h3>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question">How do you handle global projects? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer"><p>We utilize an overlapping communication window model and agile methodologies.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">What is your development timeline? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer"><p>Timelines vary based on complexity, but a typical enterprise MVP takes 3-4 months.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Do you offer post-launch support? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer"><p>Yes, we provide comprehensive SLA-based support, monitoring, and continuous improvement services.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="consultation-form-wrapper reveal delay-1">
+                <div class="consultation-form new-form-layout">
+                    <div class="form-pre-header">HOW CAN WE HELP?</div>
+                    
+                    <div class="form-chips">
+                        <button type="button" class="form-chip active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> New project</button>
+                    </div>
+
+                    <div class="form-main-header">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 8px;">Tell us about your project</h3>
+                        <p style="color: #a1a1aa; font-size: 0.95rem; margin-bottom: 24px;">Routed to <span style="color: #f8fafc; font-weight: 500;">Solutions & sales</span> · fields marked * are required</p>
+                    </div>
+                    
+                    <form class="lead-form new-lead-form">
+                        <div class="form-row-2">
+                            <input type="text" placeholder="Your name *" required>
+                            <input type="email" placeholder="Work email *" required>
+                        </div>
+                        
+                        <select>
+                            <option>Software Development</option>
+                            <option>Cloud Migration</option>
+                            <option>IT Consulting</option>
+                        </select>
+                        
+                        <select>
+                            <option>Under $10k USD</option>
+                            <option>$10k - $50k USD</option>
+                            <option>$50k+ USD</option>
+                        </select>
+                        
+                        <textarea placeholder="Project details — goals, timeline, tech stack... *" rows="4" required></textarea>
+                        
+                        <button type="submit" class="btn-submit-cyan">
+                            Send inquiry 
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        
+                        <div class="form-footer" style="text-align: left; font-size: 0.8rem; color: #64748b;">
+                            Protected by reCAPTCHA. <a href="#" style="color: #94a3b8; text-decoration: underline;">Privacy</a> & <a href="#" style="color: #94a3b8; text-decoration: underline;">Terms</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4 L4 36 L12 36 L20 18 Z" fill="#00d2ff"/>
+                            <path d="M20 4 L36 36 L28 36 L20 18 Z" fill="#0044ff"/>
+                            <path d="M9 25 L31 25 L28 32 L12 32 Z" fill="#0011aa"/>
+                        </svg>
+                        <span style="font-weight: 700; font-size: 1.25rem; color: #ffffff; letter-spacing: -0.5px;">Apps Global</span>
+                    </a>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5;">Enterprise Software & IT Services</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apps Global Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
