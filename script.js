@@ -13,7 +13,7 @@ const revealCallback = (entries, observer) => {
 const revealOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.1
 };
 
 const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
@@ -73,11 +73,27 @@ faqItems.forEach(item => {
     });
 });
 
-// Mobile menu placeholder (optional functionality)
+// Mobile menu toggle functionality
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-mobileMenuBtn.addEventListener('click', () => {
-    alert('Mobile menu toggled - Add mobile menu overlay here.');
-});
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (mobileMenuBtn && mobileMenuOverlay) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 // Terminal Typing Effect
 const codeElement = document.getElementById('running-code');

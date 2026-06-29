@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -37,12 +38,22 @@
                 <a href="#approach">Approach</a>
                 <a href="#services">Services</a>
             </nav>
-            <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+            <a href="#lead-form-section" class="btn btn-primary nav-cta">Let's Talk</a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <nav class="mobile-nav-links">
+                <a href="#solutions">Solutions</a>
+                <a href="#industries">Industries</a>
+                <a href="#approach">Approach</a>
+                <a href="#services">Services</a>
+                <a href="#lead-form-section" class="btn btn-primary" style="margin-top: 20px;">Let's Talk</a>
+            </nav>
         </div>
     </header>
 
@@ -322,7 +333,7 @@
     <!-- Section 8: Final CTA & Consultation -->
     <section class="final-cta section" id="contact">
         <div class="container split-grid">
-            <div class="cta-box glass-panel reveal">
+            <div class="cta-box glass-panel">
                 <div class="cta-content" style="text-align: left; padding: 0;">
                     <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Apps Global - Your Partner in <span class="text-gradient">Enterprise Innovation</span></h2>
                     <p style="font-size: 1.125rem; margin-bottom: 32px;">Ready to build software that scales globally? Let's discuss your specific needs and create a roadmap to success.</p>
@@ -347,7 +358,7 @@
                 </div>
             </div>
             
-            <div class="consultation-form-wrapper reveal delay-1">
+            <div class="consultation-form-wrapper" id="lead-form-section">
                 <div class="consultation-form new-form-layout">
                     <div class="form-pre-header">HOW CAN WE HELP?</div>
                     
