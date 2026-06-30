@@ -170,3 +170,55 @@ if (codeElement) {
     setTimeout(typeLine, 1000);
 }
 
+// Webhook Integration for Lead Form
+const leadForm = document.getElementById('lead-form');
+const submitBtn = document.getElementById('submit-btn');
+
+if (leadForm) {
+    leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Change button state
+        const originalBtnHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Gather form data
+        const formData = new FormData(leadForm);
+        const data = Object.fromEntries(formData.entries());
+
+        const webhookURL = 'https://services.leadconnectorhq.com/hooks/Fq8CTISLRihxLpcQ1wBN/webhook-trigger/1be1337d-2289-46cb-8d50-c75cbd0fbc80';
+
+        try {
+            const response = await fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                submitBtn.innerHTML = 'Sent Successfully! ✓';
+                submitBtn.style.background = '#22c55e'; // success green
+                leadForm.reset();
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnHTML;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            submitBtn.innerHTML = 'Error. Try Again.';
+            submitBtn.style.background = '#ef4444'; // error red
+            setTimeout(() => {
+                submitBtn.innerHTML = originalBtnHTML;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }, 3000);
+        }
+    });
+}
