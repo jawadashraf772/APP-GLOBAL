@@ -917,10 +917,7 @@ ul {
         font-size: 1.1rem !important;
     }
     .nav-cta {
-        display: inline-flex;
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        white-space: nowrap;
+        display: none;
     }
     .mobile-menu-btn { display: flex; flex-shrink: 0; z-index: 1000; }
     .stats-grid { grid-template-columns: 1fr; }
