@@ -921,6 +921,14 @@ ul {
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .cta-buttons { flex-direction: column; }
     .hero-cards { grid-template-columns: 1fr !important; }
+    
+    /* Straighten the dashboard code block on mobile */
+    .main-dashboard {
+        transform: none;
+    }
+    .main-dashboard:hover {
+        transform: none;
+    }
 }
 
 /* =========================================
