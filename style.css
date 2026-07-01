@@ -1201,3 +1201,130 @@ footer h3, footer p, footer a { color: #fff !important; }
 .form-chip { color: #ffffff !important; border: 1px solid rgba(255,255,255,0.2) !important; }
 /* Fix mobile menu button visibility */
 .navbar .mobile-menu-btn span { background: #ffffff !important; }
+/* =========================================
+   FULL PAGE ENHANCEMENTS & ANIMATIONS
+   ========================================= */
+
+/* Dynamic Background Orbs */
+.bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+    animation: floatOrb 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+.orb-1 { width: 500px; height: 500px; background: rgba(0, 162, 232, 0.15); top: -100px; left: -100px; }
+.orb-2 { width: 600px; height: 600px; background: rgba(141, 84, 255, 0.12); bottom: 10%; right: -200px; animation-delay: -5s; animation-duration: 25s; }
+.orb-3 { width: 400px; height: 400px; background: rgba(0, 210, 255, 0.1); top: 50%; left: 30%; animation-delay: -10s; }
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, 100px) scale(1.1); }
+    100% { transform: translate(-50px, 50px) scale(0.9); }
+}
+
+/* Glass Panel Enhancements */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+.glass-panel:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 40px rgba(0, 162, 232, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Specific glowing cards */
+.glow-blue:hover { box-shadow: 0 15px 40px rgba(0, 162, 232, 0.25) !important; border-color: rgba(0, 162, 232, 0.4) !important; }
+.glow-purple:hover { box-shadow: 0 15px 40px rgba(141, 84, 255, 0.25) !important; border-color: rgba(141, 84, 255, 0.4) !important; }
+
+/* Bento Item micro-animations */
+.bento-item {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease !important;
+}
+.bento-item:hover {
+    transform: scale(1.03) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Button Enhancements */
+.btn-primary, .btn-submit-cyan {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+}
+.btn-primary::before, .btn-submit-cyan::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-20deg);
+    transition: all 0.7s ease;
+}
+.btn-primary:hover::before, .btn-submit-cyan:hover::before {
+    left: 150%;
+}
+.btn-primary:hover, .btn-submit-cyan:hover {
+    transform: translateY(-2px);
+}
+
+/* Continuous slow pulse for nav CTA to draw attention */
+@keyframes softPulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 162, 232, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 162, 232, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 162, 232, 0); }
+}
+.nav-cta {
+    animation: softPulse 3s infinite !important;
+}
+
+/* Smooth reveal adjustments */
+.reveal.active {
+    animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards !important;
+}
+@keyframes revealUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Update Explore Projects button hover to match Let's Talk button */
+.hero .btn-outline:hover {
+    background: #0ea5e9 !important;
+    border-color: #0ea5e9 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4) !important;
+}
+/* Fix Insights Section Theme (Dark Mode Sync) */
+.insights.bg-darker {
+    background: transparent !important;
+}
+.insights .section-title {
+    color: #ffffff !important;
+}
+.insights .section-details {
+    color: #a1a1aa !important;
+}
+.blog-card {
+    background: rgba(1, 29, 43, 0.4) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.blog-card h3 {
+    color: #ffffff !important;
+}
+.blog-card .blog-category {
+    color: #00a2e8 !important;
+}
+.blog-card:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(0, 162, 232, 0.4) !important;
+    box-shadow: 0 15px 40px rgba(0, 162, 232, 0.2) !important;
+    transform: translateY(-8px) !important;
+}
