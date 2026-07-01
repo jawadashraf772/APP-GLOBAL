@@ -189,36 +189,17 @@ if (leadForm) {
 
         const webhookURL = 'https://services.leadconnectorhq.com/hooks/Fq8CTISLRihxLpcQ1wBN/webhook-trigger/1be1337d-2289-46cb-8d50-c75cbd0fbc80';
 
-        try {
-            const response = await fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
+        // Fire the webhook request in the background (keepalive ensures it completes even if page redirects)
+        fetch(webhookURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            keepalive: true
+        }).catch(error => console.error('Error submitting form:', error));
 
-            if (response.ok) {
-                submitBtn.innerHTML = 'Sent Successfully! ✓';
-                submitBtn.style.background = '#22c55e'; // success green
-                leadForm.reset();
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalBtnHTML;
-                    submitBtn.style.background = '';
-                    submitBtn.disabled = false;
-                }, 3000);
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            submitBtn.innerHTML = 'Error. Try Again.';
-            submitBtn.style.background = '#ef4444'; // error red
-            setTimeout(() => {
-                submitBtn.innerHTML = originalBtnHTML;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
+        // Immediately redirect to thank-you page without waiting for server response
+        window.location.href = 'thank-you.html';
     });
 }

@@ -3,20 +3,20 @@
    ========================================= */
 :root {
     /* Color Palette */
-    --bg-primary: #0a0f1a;
-    --bg-secondary: #12151b;
-    --bg-glass: rgba(18, 21, 27, 0.6);
-    --bg-glass-hover: rgba(18, 21, 27, 0.8);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f7fb;
+    --bg-glass: rgba(255, 255, 255, 0.8);
+    --bg-glass-hover: rgba(255, 255, 255, 0.95);
     
-    --accent-primary: #0399df;
-    --accent-secondary: #8d54ff;
-    --accent-glow: rgba(3, 153, 223, 0.4);
+    --accent-primary: #00a2e8;
+    --accent-secondary: #0081ba;
+    --accent-glow: rgba(0, 162, 232, 0.4);
     
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
     --text-muted: #64748b;
     
-    --border-color: rgba(255, 255, 255, 0.06);
+    --border-color: rgba(0, 0, 0, 0.08);
     
     /* Typography */
     --font-heading: 'Plus Jakarta Sans', sans-serif;
@@ -1136,3 +1136,68 @@ ul {
     .mobile-menu-overlay.active .mobile-nav-links a:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
     .mobile-menu-overlay.active .mobile-nav-links a:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
 }
+
+/* Section specific colors matching the image */
+.navbar { background: #011d2b !important; color: #fff; }
+.navbar .logo-text span { color: #fff !important; }
+.navbar a { color: #fff; }
+.hero { background: linear-gradient(135deg, #011d2b, #201c3d 45%, #027ab2) !important; color: #fff; }
+.hero h1, .hero h2, .hero h3, .hero p { color: #fff !important; }
+.statistics { background: #00a2e8 !important; color: #fff; }
+.statistics .stat-title, .statistics .stat-desc, .statistics .stat-number { color: #fff !important; }
+.statistics .glass-panel { background: rgba(255, 255, 255, 0.15) !important; border: 1px solid rgba(255, 255, 255, 0.2); }
+.impact { background: #12151b !important; color: #fff; }
+.impact .section-title, .impact .section-details { color: #fff !important; }
+.impact .testimonial-card { background: rgba(255, 255, 255, 0.05) !important; }
+.impact .testimonial-text, .impact h4 { color: #fff !important; }
+footer { background: #0a0f1a !important; color: #fff; }
+footer h3, footer p, footer a { color: #fff !important; }
+/* CTA and Button overrides matching appsglobal.io */
+.final-cta { background: #0b1121 !important; color: #fff !important; }
+.final-cta h2, .final-cta p, .final-cta h3 { color: #fff !important; }
+.btn-primary, .btn-submit, .btn-submit-cyan { border-radius: 9999px !important; background: #0ea5e9 !important; color: #fff !important; border: none !important; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4) !important; }
+.btn-primary:hover, .btn-submit:hover, .btn-submit-cyan:hover { background: #0284c7 !important; box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6) !important; color: #fff !important; }
+.consultation-form-wrapper { background: #ffffff !important; border-radius: 16px; padding: 24px; }
+.consultation-form-wrapper h3, .consultation-form-wrapper p, .consultation-form-wrapper span { color: #0f172a !important; }
+.form-pre-header { color: #0ea5e9 !important; }
+/* Fixes for Explore projects and Let's Talk buttons */
+.hero .btn-outline { color: #ffffff !important; border-color: rgba(255,255,255,0.4) !important; border-radius: 9999px !important; }
+.hero .btn-outline:hover { background: rgba(255,255,255,0.1) !important; color: #ffffff !important; }
+
+/* Let's Talk glow and style */
+.nav-cta, .btn-primary { 
+    background: #00a2e8 !important; 
+    border-radius: 9999px !important; 
+    color: #ffffff !important; 
+    box-shadow: 0 4px 20px rgba(0, 162, 232, 0.5) !important; 
+    font-weight: 600 !important;
+    border: none !important;
+}
+.nav-cta:hover, .btn-primary:hover {
+    background: #0081ba !important;
+    box-shadow: 0 6px 25px rgba(0, 162, 232, 0.7) !important;
+}
+/* Fix nav-links hover color so it doesn't disappear */
+.navbar .nav-links a:hover { color: #0ea5e9 !important; }
+/* Fix readability for FAQ and Form cards */
+.faq-question { color: #ffffff !important; opacity: 0.9; }
+.faq-answer, .faq-answer p { color: #e2e8f0 !important; }
+
+.consultation-form h3, .consultation-form p, .consultation-form span { color: #ffffff !important; }
+.consultation-form-wrapper h3, .consultation-form-wrapper p, .consultation-form-wrapper span { color: #ffffff !important; }
+
+.new-lead-form input, .new-lead-form select, .new-lead-form textarea { 
+    color: #ffffff !important; 
+    border: 1px solid rgba(255,255,255,0.15) !important; 
+    background: rgba(255,255,255,0.05) !important; 
+}
+.new-lead-form input::placeholder, .new-lead-form textarea::placeholder { 
+    color: #a1a1aa !important; 
+}
+.new-lead-form select option {
+    background: #0f172a !important;
+    color: #ffffff !important;
+}
+.form-chip { color: #ffffff !important; border: 1px solid rgba(255,255,255,0.2) !important; }
+/* Fix mobile menu button visibility */
+.navbar .mobile-menu-btn span { background: #ffffff !important; }
