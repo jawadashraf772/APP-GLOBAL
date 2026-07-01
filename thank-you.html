@@ -3,107 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apps Global | Enterprise Software Built for Global Scale</title>
-    <meta name="description" content="Empower your organization with robust, scalable, and secure enterprise solutions.">
+    <title>Thank You | AppsGlobal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="https://appsglobal.co/favicon/favicon.ico">
+    <style>
+        .thank-you-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+        .thank-you-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 32px;
+            padding: 60px 40px;
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Background Elements -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="grid-overlay"></div>
+    <!-- Next-Gen Background Orbs -->
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="noise-overlay"></div>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <!-- Styled A Logo -->
-                <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 4 L4 36 L12 36 L20 18 Z" fill="#00d2ff"/>
-                    <path d="M20 4 L36 36 L28 36 L20 18 Z" fill="#0044ff"/>
-                    <path d="M9 25 L31 25 L28 32 L12 32 Z" fill="#0011aa"/>
+    <div class="thank-you-wrapper">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-                <div class="logo-text" style="display: flex; flex-direction: column; line-height: 1.2;">
-                    <span style="font-weight: 700; font-size: 1.2rem; color: #ffffff; letter-spacing: -0.5px;">Apps Global</span>
-                    <span style="font-weight: 500; font-size: 0.8rem; color: #00d2ff;">Your trusted technology partner</span>
-                </div>
-            </a>
-            <nav class="nav-links">
-                <a href="#solutions">Solutions</a>
-                <a href="#industries">Industries</a>
-                <a href="#approach">Approach</a>
-                <a href="#services">Services</a>
-            </nav>
-            <a href="#lead-form-section" class="btn btn-primary nav-cta">Let's Talk</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay">
-            <nav class="mobile-nav-links">
-                <a href="#solutions">Solutions</a>
-                <a href="#industries">Industries</a>
-                <a href="#approach">Approach</a>
-                <a href="#services">Services</a>
-                <a href="#lead-form-section" class="btn btn-primary" style="margin-top: 20px;">Let's Talk</a>
-            </nav>
-        </div>
-    </header>
-    <section class="hero" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;">
-        <div class="container fade-up" style="width: 100%; display: flex; justify-content: center;">
-            <div class="glass-panel" style="padding: 60px 40px; max-width: 600px; margin: 0 auto; border-radius: 24px; border: 1px solid rgba(0, 162, 232, 0.3); background: rgba(1, 29, 43, 0.4);">
-                <div style="width: 80px; height: 80px; background: rgba(0, 162, 232, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00a2e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                </div>
-                <h1 style="font-size: 3rem; margin-bottom: 16px; color: #ffffff;">Thank You!</h1>
-                <p style="font-size: 1.125rem; color: #a1a1aa; margin-bottom: 32px;">Your inquiry has been successfully submitted. Our team will review your project details and get back to you shortly.</p>
-                <a href="index.html" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem; text-decoration: none; display: inline-block;">Return to Homepage</a>
             </div>
+            <h1 class="headline" style="font-size: 3rem; margin-bottom: 16px;">Thank You!</h1>
+            <p class="section-desc centered mb-8 text-gray-400">We have successfully received your message. One of our AppsGlobal representatives will get back to you shortly.</p>
+            <a href="index.html" class="btn btn-gradient btn-lg">Return to Home</a>
         </div>
-    </section>
-<footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 16px;">
-                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 4 L4 36 L12 36 L20 18 Z" fill="#00d2ff"/>
-                            <path d="M20 4 L36 36 L28 36 L20 18 Z" fill="#0044ff"/>
-                            <path d="M9 25 L31 25 L28 32 L12 32 Z" fill="#0011aa"/>
-                        </svg>
-                        <span style="font-weight: 700; font-size: 1.25rem; color: #ffffff; letter-spacing: -0.5px;">Apps Global</span>
-                    </a>
-                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5;">Enterprise Software & IT Services</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Apps Global Pvt Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
-
