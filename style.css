@@ -1302,7 +1302,7 @@ footer h3, footer p, footer a { color: #fff !important; }
 }
 /* Fix Insights Section Theme (Dark Mode Sync) */
 .insights.bg-darker {
-    background: transparent !important;
+    background: #011d2b !important;
 }
 .insights .section-title {
     color: #ffffff !important;
