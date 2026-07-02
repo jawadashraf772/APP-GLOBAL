@@ -42,6 +42,7 @@
                 <a href="#loan">Loan System</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
+                <a href="#lead-form" class="btn btn-gradient mt-4" style="padding: 12px 28px; border-radius: 100px; font-weight: 700; box-shadow: 0 4px 20px rgba(252, 58, 39, 0.4); width: 100%; text-align: center; max-width: 250px;">Get Started</a>
             </div>
         </div>
     </header>
@@ -133,8 +134,12 @@
                     <span class="company-logo">FinTechPro</span>
                     <span class="company-logo">NextGen</span>
                     <span class="company-logo">LendCorp</span>
-                    <span class="company-logo">Acme Corp</span>
-                    <span class="company-logo">GlobalBank</span>
+                    
+                    <span class="company-logo" aria-hidden="true">Acme Corp</span>
+                    <span class="company-logo" aria-hidden="true">GlobalBank</span>
+                    <span class="company-logo" aria-hidden="true">FinTechPro</span>
+                    <span class="company-logo" aria-hidden="true">NextGen</span>
+                    <span class="company-logo" aria-hidden="true">LendCorp</span>
                 </div>
             </div>
         </div>
@@ -648,35 +653,38 @@
     </footer>
 
     <script>
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll Reveal Animation
-        const elementsToReveal = document.querySelectorAll('.bento-item, .service-card, .step-card, .testimonial-card, .work-item, .section-header, .faq-accordion-item, .project-form-container, .loan-card, .contact-visual');
-        elementsToReveal.forEach((el, index) => {
-            el.classList.add('reveal');
-            // Add a slight stagger effect based on index to elements close to each other
-            if(index % 3 === 1) el.classList.add('reveal-delay-1');
-            if(index % 3 === 2) el.classList.add('reveal-delay-2');
-        });
-
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+        (() => {
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 20) {
+                    navbar.classList.add('scrolled');
                 } else {
-                    entry.target.classList.remove('active');
+                    navbar.classList.remove('scrolled');
                 }
             });
-        }, { threshold: 0.1 });
 
-        elementsToReveal.forEach(el => revealObserver.observe(el));
+            // Scroll Reveal Animation
+            const elementsToReveal = document.querySelectorAll('.bento-item, .service-card, .step-card, .testimonial-card, .work-item, .section-header, .faq-accordion-item, .project-form-container, .loan-card, .contact-visual');
+            elementsToReveal.forEach((el, index) => {
+                el.classList.add('reveal');
+                // Add a slight stagger effect based on index to elements close to each other
+                if(index % 3 === 1) el.classList.add('reveal-delay-1');
+                if(index % 3 === 2) el.classList.add('reveal-delay-2');
+            });
+
+            const localRevealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elementsToReveal.forEach(el => localRevealObserver.observe(el));
+        })();
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
