@@ -25,95 +25,100 @@
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a href="#contact" class="btn btn-gradient nav-cta">Let's Talk</a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="#lead-form" class="btn btn-gradient nav-cta" style="padding: 12px 28px; border-radius: 100px; font-weight: 700; box-shadow: 0 4px 20px rgba(252, 58, 39, 0.4);">Get Started</a>
+                <div class="hamburger mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-nav-links">
+                <a href="#hero">Home</a>
+                <a href="#loan">Loan System</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </header>
 
     <!-- 1. Hero Section (Light) -->
-    <section class="hero bg-light" id="hero">
-        <div class="container hero-container-centered">
-            <div class="hero-stats-pills">
-                <div class="stat-pill"><strong>300+</strong> Global Clients</div>
-                <div class="stat-pill"><strong>500+</strong> Systems Shipped</div>
-                <div class="stat-pill"><strong>99.9%</strong> Uptime SLA</div>
-            </div>
+    <section class="hero bg-light" id="hero" style="padding: 200px 0 140px; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        
+        <!-- Subtle background glow and concentric circles -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fffdfc; background-image: radial-gradient(circle at center 30%, rgba(252, 58, 39, 0.05) 0%, transparent 60%), repeating-radial-gradient(circle at center 35%, transparent 0, transparent 49px, rgba(0, 0, 0, 0.03) 50px); z-index: 0; pointer-events: none;"></div>
 
-            <div class="hero-content-center">
-                <div class="badge-pill-green mx-auto mb-6">
-                    <span class="pulse-dot-green"></span> ENTERPRISE SOFTWARE SOLUTIONS
+        <div class="container" style="position: relative; z-index: 1; max-width: 1200px; text-align: center;">
+            
+            <!-- Centered Content Top -->
+            <div class="hero-content-center" style="display: flex; flex-direction: column; align-items: center;">
+                
+                <div class="badge-pill-green" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 25px rgba(0,0,0,0.04); color: var(--text-light-mode); font-weight: 700; padding: clamp(6px, 2vw, 10px) clamp(12px, 3vw, 20px); border-radius: 100px; margin-bottom: 40px; display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                    <span class="pulse-dot-green" style="background: var(--primary); box-shadow: 0 0 12px var(--primary-glow); width: 8px; height: 8px; flex-shrink: 0;"></span> 
+                    <span style="letter-spacing: 1px; font-size: clamp(0.65rem, 2vw, 0.85rem); text-align: center;">ENTERPRISE SOFTWARE SOLUTIONS</span>
                 </div>
-                <h1 class="headline-massive">We build <br> 
-                    <span class="rolling-text-wrapper text-red-glow">
+                
+                <h1 class="headline-massive" style="font-size: clamp(1.8rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 30px; color: var(--text-light-mode);">
+                    We build <br> 
+                    <span class="rolling-text-wrapper text-red-glow" style="margin: 0; padding: 0;">
                         <span class="rolling-text-inner">
                             <span>FinTech Platforms</span>
                             <span>CRM & ERP</span>
-                            <span>Loan Management Systems</span>
-                            <span>Custom Enterprise Apps</span>
+                            <span>Loan Management</span>
+                            <span>Custom Enterprise</span>
                             <span>HR Management</span>
                             <span>FinTech Platforms</span>
                         </span>
                     </span>
-                <br>that scale with your business.</h1>
-                <p class="sub-headline-centered">Home of <strong>AppsLend™</strong> — our flagship Loan Management System — and a complete engineering practice across FinTech, banking, HR, and custom enterprise platforms.</p>
-                <div class="hero-actions-centered">
-                    <a href="#contact" class="btn btn-gradient btn-lg">Book a Solution Consult &rarr;</a>
-                    <a href="#services" class="btn btn-outline btn-lg">Explore Solutions</a>
+                    <br><span style="color: rgba(15, 23, 42, 0.4);">that scale.</span>
+                </h1>
+                
+                <p class="sub-headline-new" style="font-size: clamp(1rem, 4vw, 1.35rem); color: var(--text-muted-light); line-height: 1.6; max-width: 800px; margin: 0 auto 50px auto; padding: 0 16px;">
+                    Home of <strong style="color: var(--text-light-mode);">AppsLend™</strong> — our flagship Loan Management System — and a complete engineering practice across FinTech, banking, HR, and custom platforms.
+                </p>
+                
+                <div class="hero-actions-new" style="display: flex; gap: 16px; margin-bottom: 100px; justify-content: center; flex-wrap: wrap; width: 100%; padding: 0 16px;">
+                    <a href="#lead-form" class="btn btn-gradient btn-lg" style="padding: clamp(14px, 3vw, 20px) clamp(24px, 5vw, 44px); font-size: clamp(1rem, 3vw, 1.25rem); box-shadow: 0 12px 40px var(--primary-glow); transform: translateY(0); transition: all 0.3s ease; flex: 1 1 auto; text-align: center; min-width: 250px;">Book Consult &rarr;</a>
+                    <a href="#services" class="btn btn-outline btn-lg" style="border: 2px solid rgba(0,0,0,0.06); background: white; padding: clamp(14px, 3vw, 18px) clamp(24px, 5vw, 40px); font-size: clamp(1rem, 3vw, 1.25rem); flex: 1 1 auto; text-align: center; min-width: 250px;">Explore Solutions</a>
                 </div>
+            </div>
+
+            <!-- 3 Cards Row (Mapped from Stats Pills) -->
+            <div class="hero-cards-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; width: 100%; max-width: 1200px; margin: 0 auto;">
+                
+                <!-- Card 1 -->
+                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    </div>
+                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">300+</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Global Clients</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">500+</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Systems Shipped</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">99.9%</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Uptime SLA</p>
+                </div>
+
             </div>
             
-            <div class="hero-visual-bottom">
-
-                <div class="dashboard-panel panoramic">
-                    <div class="dash-url-bar">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fc3a27" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                        <span>console.appsglobal.io</span>
-                    </div>
-                    
-                    <div class="dash-body">
-                        <div class="dash-header">
-                            <div>
-                                <div class="small-text">SOLUTION MODULES - LIVE</div>
-                                <div class="large-text">Active Deployments</div>
-                            </div>
-                            <div class="badge-operational"><span class="dot-green"></span> OPERATIONAL</div>
-                        </div>
-
-                        <div class="deployment-list">
-                            <div class="deploy-item">
-                                <div class="icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                                <div class="deploy-details">
-                                    <div class="title">FinTech Payment Engine</div>
-                                    <div class="meta">v4.2.1 &nbsp; 11.4k tx/s</div>
-                                </div>
-                                <div class="status-live"><span class="dot-green"></span> LIVE</div>
-                            </div>
-                            <div class="deploy-item">
-                                <div class="icon-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                                <div class="deploy-details">
-                                    <div class="title">Loan Management System</div>
-                                    <div class="meta">v2.0.0 &nbsp; 6 lenders</div>
-                                </div>
-                                <div class="status-live"><span class="dot-green"></span> LIVE</div>
-                            </div>
-                        </div>
-
-                        <div class="dash-footer">
-                            <div class="footer-stat">
-                                <div class="label">UPTIME</div>
-                                <div class="val">99.99%</div>
-                            </div>
-                            <div class="footer-stat">
-                                <div class="label">LATENCY P95</div>
-                                <div class="val">82ms</div>
-                            </div>
-                            <div class="footer-stat">
-                                <div class="label">DEPLOYS/WK</div>
-                                <div class="val">24</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -142,8 +147,8 @@
         <div class="glow-orb orb-secondary"></div>
         <div class="container">
             <div class="section-header text-center">
-                <div class="badge-pill-red mx-auto mb-4" style="margin: 0 auto 20px auto; width: max-content; color: #fc3a27; border: 1px solid rgba(252, 58, 39, 0.3); padding: 6px 14px; border-radius: 100px; font-size: 0.65rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,0,0,0.5);">
-                    <span class="pulse-dot-red" style="width: 6px; height: 6px; background: #fc3a27; border-radius: 50%; box-shadow: 0 0 8px #fc3a27;"></span> FLAGSHIP PLATFORM - LOAN MANAGEMENT
+                <div class="badge-pill-red mx-auto mb-4" style="margin: 0 auto 20px auto; width: fit-content; max-width: 100%; color: #fc3a27; border: 1px solid rgba(252, 58, 39, 0.3); padding: 6px 14px; border-radius: 100px; font-size: 0.65rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; background: rgba(0,0,0,0.5);">
+                    <span class="pulse-dot-red" style="width: 6px; height: 6px; background: #fc3a27; border-radius: 50%; box-shadow: 0 0 8px #fc3a27; flex-shrink: 0;"></span> <span style="text-align: center;">FLAGSHIP PLATFORM - LOAN MANAGEMENT</span>
                 </div>
                 <h2 class="section-title"><span style="color: #fc3a27;">AppsLend™</span> A complete digital <br> Loan Management System.</h2>
                 <p class="section-desc centered mt-4" style="max-width: 800px;">Our flagship LMS — engineered to digitize the entire loan lifecycle across Retail, Corporate & SME, and Islamic Finance. Built on a service-oriented architecture with 600+ APIs.</p>
@@ -193,9 +198,9 @@
                         <div class="ds-item"><strong>Sub-5min</strong><p>DECISIONING TAT</p></div>
                         <div class="ds-item"><strong>3 LOBs</strong><p>RETAIL - SME - ISLAMIC</p></div>
                     </div>
-                    <div class="dash-actions">
-                        <a href="#contact" class="btn" style="background: #ffffff; color: #0f172a; border: 1px solid #ffffff; font-weight: 700;">Explore AppsLend Platform &rarr;</a>
-                        <a href="#contact" class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.2); color: #fff;">Request Demo</a>
+                    <div class="dash-actions" style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 40px; margin-bottom: 30px;">
+                        <a href="#lead-form" class="btn" style="background: var(--primary); color: #ffffff; border: none; font-weight: 700; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1.3; font-size: 1.1rem; padding: 16px 32px; box-shadow: 0 10px 30px rgba(252, 58, 39, 0.4); transition: transform 0.3s ease;">Explore AppsLend Platform &rarr;</a>
+                        <a href="#lead-form" class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1.3; font-size: 1.1rem; padding: 16px 32px; transition: background 0.3s ease;">Request Demo</a>
                     </div>
                 </div>
                 <div class="dash-bar-bottom">
@@ -250,7 +255,7 @@
                     <div class="section-header text-left mb-8">
                         <h2 class="section-title">Our Services <br><span class="text-gradient">Portfolio</span></h2>
                         <p class="section-desc mt-4">AppsGlobal covers a wide range of digital services tailored for modern business needs, providing end-to-end expertise.</p>
-                        <a href="#contact" class="btn btn-gradient mt-8" style="display: inline-block;">Get Started</a>
+                        <a href="#lead-form" class="btn btn-gradient mt-8" style="display: inline-block;">Get Started</a>
                     </div>
                 </div>
                 <div class="services-scroll-list">
@@ -441,10 +446,10 @@
                 <p class="section-desc centered text-muted" style="max-width: 700px; font-size: 1rem;">What teams typically ask before engaging us — from delivery timelines to support and pricing.</p>
             </div>
             
-            <div class="faq-accordion-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-accordion-container" style="max-width: 800px; margin: 0 auto; padding: 0 16px;">
                 
                 <!-- FAQ Item 1 (Expanded) -->
-                <details class="faq-accordion-item" open>
+                <details class="faq-accordion-item" name="faq" open>
                     <summary class="faq-accordion-header">
                         <span class="faq-title">What types of applications do you develop?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -455,7 +460,7 @@
                 </details>
 
                 <!-- FAQ Item 2 -->
-                <details class="faq-accordion-item">
+                <details class="faq-accordion-item" name="faq">
                     <summary class="faq-accordion-header">
                         <span class="faq-title">How long does it take to develop a custom application?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -466,7 +471,7 @@
                 </details>
 
                 <!-- FAQ Item 3 -->
-                <details class="faq-accordion-item">
+                <details class="faq-accordion-item" name="faq">
                     <summary class="faq-accordion-header">
                         <span class="faq-title">Do you offer support and maintenance?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -477,7 +482,7 @@
                 </details>
 
                 <!-- FAQ Item 4 -->
-                <details class="faq-accordion-item">
+                <details class="faq-accordion-item" name="faq">
                     <summary class="faq-accordion-header">
                         <span class="faq-title">Can you modernize or upgrade my existing application?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -488,7 +493,7 @@
                 </details>
 
                 <!-- FAQ Item 5 -->
-                <details class="faq-accordion-item">
+                <details class="faq-accordion-item" name="faq">
                     <summary class="faq-accordion-header">
                         <span class="faq-title">What is included in your software development services?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -499,7 +504,7 @@
                 </details>
 
                 <!-- FAQ Item 6 -->
-                <details class="faq-accordion-item">
+                <details class="faq-accordion-item" name="faq">
                     <summary class="faq-accordion-header">
                         <span class="faq-title">How much does it cost to develop a custom application?</span>
                         <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
@@ -512,12 +517,12 @@
             </div>
 
             <!-- FAQ CTA Footer -->
-            <div class="faq-cta-box" style="max-width: 800px; margin: 40px auto 0; background: #0f172a; border-radius: 16px; padding: 32px 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                <div>
+            <div class="faq-cta-box" style="max-width: 800px; margin: 40px auto 0; background: #0f172a; border-radius: 16px; padding: clamp(24px, 5vw, 32px) clamp(20px, 5vw, 40px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+                <div style="flex: 1 1 300px;">
                     <h3 class="text-white font-bold text-xl mb-1" style="color: #fff; margin-bottom: 4px;">Still have questions?</h3>
                     <p class="text-sm" style="color: #94a3b8; margin: 0;">Our technical team is ready to help you define your scope.</p>
                 </div>
-                <a href="#contact" class="btn" style="background: #ffffff; color: #0f172a; font-weight: 700; border-radius: 8px;">Chat with an Expert</a>
+                <a href="#lead-form" class="btn" style="background: #ffffff; color: #0f172a; font-weight: 700; border-radius: 8px; flex-shrink: 0;">Chat with an Expert</a>
             </div>
 
         </div>
@@ -562,7 +567,7 @@
                 </div>
 
                 <!-- Right Form -->
-                <div class="project-form-container reveal reveal-delay-1" style="margin: 0; width: 100%; max-width: 100%;">
+                <div id="lead-form" class="project-form-container reveal reveal-delay-1" style="margin: 0; width: 100%; max-width: 100%; scroll-margin-top: 100px;">
                     <h2 class="form-title">Tell us about your project</h2>
                 <form action="thank-you.html" class="custom-project-form">
                     <div class="form-row">
