@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://appsglobal.co/favicon/favicon.ico">
+    <style>
+        .slanted-bottom { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); padding-bottom: 150px !important; }
+        .slanted-top-bottom { clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); padding: 120px 0 !important; }
+        .hero-chargebee-layout {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding-top: 150px !important;
+        }
+        @media (max-width: 992px) {
+            .hero-chargebee-layout {
+                grid-template-columns: 1fr !important;
+                padding-top: 100px !important;
+            }
+        }
+    </style>
 </head>
 <body class="bg-light">
 
@@ -47,84 +66,94 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section (Light) -->
-    <section class="hero bg-light" id="hero" style="padding: 200px 0 140px; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        
-        <!-- Subtle background glow and concentric circles -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fffdfc; background-image: radial-gradient(circle at center 30%, rgba(252, 58, 39, 0.05) 0%, transparent 60%), repeating-radial-gradient(circle at center 35%, transparent 0, transparent 49px, rgba(0, 0, 0, 0.03) 50px); z-index: 0; pointer-events: none;"></div>
+    <!-- 1. Hero Section (Dark & Slanted) -->
+    <section class="hero bg-dark slanted-bottom" id="hero" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at right 30%, rgba(252, 58, 39, 0.15) 0%, transparent 50%); z-index: 0; pointer-events: none;"></div>
 
-        <div class="container" style="position: relative; z-index: 1; max-width: 1200px; text-align: center;">
+        <div class="hero-chargebee-layout container" style="position: relative; z-index: 1;">
             
-            <!-- Centered Content Top -->
-            <div class="hero-content-center" style="display: flex; flex-direction: column; align-items: center;">
-                
-                <div class="badge-pill-green" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 25px rgba(0,0,0,0.04); color: var(--text-light-mode); font-weight: 700; padding: clamp(6px, 2vw, 10px) clamp(12px, 3vw, 20px); border-radius: 100px; margin-bottom: 40px; display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;">
-                    <span class="pulse-dot-green" style="background: var(--primary); box-shadow: 0 0 12px var(--primary-glow); width: 8px; height: 8px; flex-shrink: 0;"></span> 
-                    <span style="letter-spacing: 1px; font-size: clamp(0.65rem, 2vw, 0.85rem); text-align: center;">ENTERPRISE SOFTWARE SOLUTIONS</span>
+            <!-- Left Column: Content -->
+            <div class="hero-content-left" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                <div class="badge-pill-green" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-weight: 700; padding: clamp(6px, 2vw, 10px) clamp(12px, 3vw, 20px); border-radius: 100px; margin-bottom: 30px; display: inline-flex; align-items: center; gap: 12px;">
+                    <span class="pulse-dot-green" style="background: var(--primary); box-shadow: 0 0 12px var(--primary-glow); width: 8px; height: 8px; border-radius: 50%;"></span> 
+                    <span style="letter-spacing: 1px; font-size: 0.8rem;">ENTERPRISE SOFTWARE SOLUTIONS</span>
                 </div>
                 
-                <h1 class="headline-massive" style="font-size: clamp(1.8rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 30px; color: var(--text-light-mode);">
+                <h1 class="headline-massive text-white" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px;">
                     We build <br> 
-                    <span class="rolling-text-wrapper text-red-glow" style="margin: 0; padding: 0;">
-                        <span class="rolling-text-inner">
-                            <span>FinTech Platforms</span>
-                            <span>CRM & ERP</span>
-                            <span>Loan Management</span>
-                            <span>Custom Enterprise</span>
-                            <span>HR Management</span>
-                            <span>FinTech Platforms</span>
-                        </span>
-                    </span>
-                    <br><span style="color: rgba(15, 23, 42, 0.4);">that scale.</span>
+                    <span style="color: var(--primary);">FinTech Platforms</span>
+                    <br>that scale.
                 </h1>
                 
-                <p class="sub-headline-new" style="font-size: clamp(1rem, 4vw, 1.35rem); color: var(--text-muted-light); line-height: 1.6; max-width: 800px; margin: 0 auto 50px auto; padding: 0 16px;">
-                    Home of <strong style="color: var(--text-light-mode);">AppsLend™</strong> — our flagship Loan Management System — and a complete engineering practice across FinTech, banking, HR, and custom platforms.
+                <p class="text-muted-light" style="font-size: 1.1rem; line-height: 1.6; max-width: 500px; margin-bottom: 40px;">
+                    Home of <strong>AppsLend™</strong> — our flagship Loan Management System — and a complete engineering practice across FinTech, banking, HR, and custom platforms.
                 </p>
                 
-                <div class="hero-actions-new" style="display: flex; gap: 16px; margin-bottom: 100px; justify-content: center; flex-wrap: wrap; width: 100%; padding: 0 16px;">
-                    <a href="#lead-form" class="btn btn-gradient btn-lg" style="padding: clamp(14px, 3vw, 20px) clamp(24px, 5vw, 44px); font-size: clamp(1rem, 3vw, 1.25rem); box-shadow: 0 12px 40px var(--primary-glow); transform: translateY(0); transition: all 0.3s ease; flex: 1 1 auto; text-align: center; min-width: 250px;">Book Consult &rarr;</a>
-                    <a href="#services" class="btn btn-outline btn-lg" style="border: 2px solid rgba(0,0,0,0.06); background: white; padding: clamp(14px, 3vw, 18px) clamp(24px, 5vw, 40px); font-size: clamp(1rem, 3vw, 1.25rem); flex: 1 1 auto; text-align: center; min-width: 250px;">Explore Solutions</a>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="#services" class="btn btn-outline" style="border: 1px solid rgba(255,255,255,0.2); color: white; padding: 16px 32px; border-radius: 100px;">Explore Solutions</a>
                 </div>
             </div>
 
-            <!-- 3 Cards Row (Mapped from Stats Pills) -->
-            <div class="hero-cards-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; width: 100%; max-width: 1200px; margin: 0 auto;">
-                
-                <!-- Card 1 -->
-                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                    </div>
-                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">300+</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Global Clients</p>
+            <!-- Right Column: Form -->
+            <div class="hero-form-right" style="position: relative; z-index: 10;">
+                <div id="lead-form" class="project-form-container chargebee-form-wrapper" style="margin: 0; width: 100%;">
+                    <h2 class="form-title" style="font-size: 1.5rem; margin-bottom: 24px;">Schedule a Demo</h2>
+                    <form action="thank-you.html" class="custom-project-form">
+                        <div class="form-row" style="margin-bottom: 16px;">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Work Email</label>
+                                <input type="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row" style="margin-bottom: 16px;">
+                            <div class="form-group">
+                                <label>Service Needed</label>
+                                <select required>
+                                    <option>Custom Software</option>
+                                    <option>Mobile App</option>
+                                    <option>Web Platform</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Budget</label>
+                                <select required>
+                                    <option>$10k - $25k</option>
+                                    <option>$50k - $100k</option>
+                                    <option>$100k+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label>Project Details</label>
+                            <textarea placeholder="Tell us about your goals..." rows="2" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gradient" style="width: 100%; border-radius: 100px; padding: 16px; transition: all 0.3s;">Schedule Demo &rarr;</button>
+                        <p style="font-size: 0.75rem; color: #64748b; text-align: center; margin-top: 16px;">By submitting, you agree to our Privacy Policy.</p>
+                    </form>
+                    <script>
+                        document.querySelector('.custom-project-form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            const btn = this.querySelector('button[type="submit"]');
+                            btn.innerHTML = 'Processing...';
+                            btn.style.opacity = '0.7';
+                            btn.style.pointerEvents = 'none';
+                            // Simulate network request then redirect
+                            setTimeout(() => {
+                                window.location.href = this.action;
+                            }, 800);
+                        });
+                    </script>
                 </div>
-
-                <!-- Card 2 -->
-                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                    </div>
-                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">500+</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Systems Shipped</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.04); border-radius: 20px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                    <div style="width: 64px; height: 64px; border-radius: 16px; background: rgba(252, 58, 39, 0.08); display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px;">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    </div>
-                    <h3 style="font-size: 2.5rem; color: var(--text-light-mode); font-weight: 800; margin-bottom: 10px; line-height: 1;">99.9%</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-muted-light); font-weight: 600; line-height: 1.4;">Uptime SLA</p>
-                </div>
-
             </div>
-            
         </div>
     </section>
 
     <!-- Trusted By Logos (Light) -->
-    <section class="trusted-by section-padding bg-light">
+    <section class="trusted-by section-padding bg-light" style="padding-top: 60px;">
         <div class="container text-center">
             <p class="small-text text-muted mb-6" style="letter-spacing: 2px;">TRUSTED BY INNOVATIVE TEAMS WORLDWIDE</p>
             <div class="logo-ticker">
@@ -140,6 +169,27 @@
                     <span class="company-logo" aria-hidden="true">FinTechPro</span>
                     <span class="company-logo" aria-hidden="true">NextGen</span>
                     <span class="company-logo" aria-hidden="true">LendCorp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (Solid Color Slanted) -->
+    <section class="stats-section bg-primary slanted-top-bottom" style="background: var(--primary); margin-top: 40px; position: relative; z-index: 2;">
+        <div class="container text-center">
+            <h2 class="text-white" style="font-size: 2rem; font-weight: 800; margin-bottom: 60px;">What the market has to say</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
+                <div>
+                    <h3 style="font-size: 3.5rem; color: #ffffff; font-weight: 800; line-height: 1;">300+</h3>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 10px;">Global Clients</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3.5rem; color: #ffffff; font-weight: 800; line-height: 1;">500+</h3>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 10px;">Systems Shipped</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3.5rem; color: #ffffff; font-weight: 800; line-height: 1;">99.9%</h3>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 10px;">Uptime SLA</p>
                 </div>
             </div>
         </div>
@@ -571,51 +621,12 @@
                     </div>
                 </div>
 
-                <!-- Right Form -->
-                <div id="lead-form" class="project-form-container reveal reveal-delay-1" style="margin: 0; width: 100%; max-width: 100%; scroll-margin-top: 100px;">
-                    <h2 class="form-title">Tell us about your project</h2>
-                <form action="thank-you.html" class="custom-project-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Work Email</label>
-                            <input type="email" placeholder="john@company.com" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Service Needed</label>
-                            <select required>
-                                <option>Custom Software Development</option>
-                                <option>Mobile App Development</option>
-                                <option>Web Platform</option>
-                                <option>UI/UX Design</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Estimated Budget</label>
-                            <select required>
-                                <option>$10k - $25k</option>
-                                <option>$25k - $50k</option>
-                                <option>$50k - $100k</option>
-                                <option>$100k+</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Project Details</label>
-                        <textarea placeholder="Tell us about your goals, timeline, and requirements..." rows="4" required></textarea>
-                    </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" id="privacy" required checked>
-                        <label for="privacy">I agree to the <a href="#">Privacy Policy</a>. Data is 256-bit encrypted.</label>
-                    </div>
-                    <button type="submit" class="btn btn-red-full">Send Inquiry &rarr;</button>
-                </form>
-            </div>
+                <!-- Bottom CTA -->
+                <div class="text-center" style="width: 100%; padding: 60px 40px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
+                    <h2 class="form-title" style="margin-bottom: 16px;">Ready to transform your business?</h2>
+                    <p class="text-muted" style="margin-bottom: 32px; font-size: 1.1rem;">Join hundreds of companies that trust AppsGlobal for their enterprise software needs.</p>
+                    <a href="#hero" class="btn btn-red-full" style="max-width: 300px; margin: 0 auto; display: inline-block;">Get Started Now &rarr;</a>
+                </div>
             </div>
         </div>
     </section>

@@ -636,12 +636,23 @@ button.btn:hover {
 }
 
 .bento-item, .service-card, .step-card, .testimonial-card, .loan-card, .faq-accordion-item, .v-card {
-    border-radius: 24px !important;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03), 0 10px 30px rgba(0,0,0,0.1) !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    border-top: 4px solid var(--primary) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    color: #0f172a !important; /* Force dark text on white cards */
+}
+.bento-item h3, .service-card h3, .step-card h3, .testimonial-card h4, .loan-card h3, .faq-accordion-item .faq-title {
+    color: #0f172a !important;
+}
+.bento-item p, .service-card p, .step-card p, .testimonial-card p, .loan-card p, .faq-accordion-content p {
+    color: #475569 !important;
 }
 
-.bg-dark .bento-item, .bg-dark .service-card, .bg-dark .step-card, .bg-dark .testimonial-card, .bg-dark .loan-card, .bg-dark .faq-accordion-item {
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 15px 40px rgba(0,0,0,0.3) !important;
+.bento-item:hover, .service-card:hover, .step-card:hover, .testimonial-card:hover, .loan-card:hover, .faq-accordion-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
 }
 
 /* --- SpeedySol Tech Agency Layout Overrides --- */
@@ -1012,5 +1023,63 @@ button.btn:hover {
     }
     .brand-name {
         font-size: 1.1rem !important;
+    }
+}
+
+/* --- Chargebee UI Redesign Classes --- */
+.slanted-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding-bottom: 150px !important;
+}
+.slanted-top-bottom {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    padding: 150px 0 !important;
+}
+.hero-chargebee-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+.chargebee-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 32px;
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chargebee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.form-light {
+    background: #ffffff !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1) !important;
+}
+.form-light .form-title { color: #0f172a !important; }
+.form-light label { color: #475569 !important; }
+.form-light input, .form-light select, .form-light textarea {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+}
+.form-light input:focus, .form-light select:focus, .form-light textarea:focus {
+    background: #ffffff !important;
+    border-color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+    .hero-chargebee-layout {
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+    }
+    .slanted-bottom {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        padding-bottom: 100px !important;
     }
 }
